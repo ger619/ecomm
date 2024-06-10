@@ -1,11 +1,15 @@
 <div id="<%= dom_id product %>">
   <p class="my-5">
     <strong class="block font-medium mb-1">Images:</strong>
+    <% if product.images.any? %>
+    <div class="flex gap-4">
+      <% product.images.each do |image| %>
+        <%= image_tag image, class: ' h-40' %>
+      <% end %>
+    </div>
+  <% end %>
 
 
-    <% if product.images.attached? %>
-      <%= image_tag(product.images) %>
-    <% end %>
   </p>
   <p class="my-5">
     <strong class="block font-medium mb-1">Name:</strong>
