@@ -11,16 +11,18 @@
             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-8 00 uppercase tracking-wider">Price</th>
             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-8 00 uppercase tracking-wider">Category</th>
             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-8 00 uppercase tracking-wider">Active</th>
-
-
           </tr>
           </thead>
           <tbody>
           <% @admin_products.each do |p| %>
             <tr class="bg-gray-50  border-b">
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 underline">
-                <% if p.images.attached? %>
-                  <%= p.images.any? ? image_tag(p.images.first.variant(:thumb)) : image_tag('https://via.placeholder.com/50') %>
+                <% if p.images.any? %>
+                  <div class="flex gap-4">
+                    <% p.images.limit(1).each do |image| %>
+                      <%= image_tag image, class: ' h-10' %>
+                    <% end %>
+                  </div>
                 <% end %>
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 underline">
