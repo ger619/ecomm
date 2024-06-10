@@ -87,12 +87,14 @@ rspec
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Lifeline-Solutions/mseal-rails/issues).
+Feel free to check the [issues page](https://github.com/ger619/ecomm/issues).
 
 ## Design
 
-Original design idea by [Annah Waweru](https://www.figma.com/file/6zsi1cWfC3PzQNzxXXuSxI/Website-version-2.0?type=design&node-id=1-2&mode=design) on Behance.
+Original design idea by []() on Behance.
+
 The Creative Commons license of the design requires that you give appropriate credit to the author.
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
