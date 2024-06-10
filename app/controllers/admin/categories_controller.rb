@@ -3,7 +3,7 @@ class Admin::CategoriesController < AdminController
 
   # GET /admin/categories or /admin/categories.json
   def index
-    @admin_categories = Category.all
+    @admin_category = Category.all
   end
 
   # GET /admin/categories/1 or /admin/categories/1.json
@@ -64,6 +64,6 @@ class Admin::CategoriesController < AdminController
 
   # Only allow a list of trusted parameters through.
   def admin_category_params
-    params.require(:category).permit(:name, :description)
+    params.require(:category).permit(:name, :description, :image)
   end
 end
