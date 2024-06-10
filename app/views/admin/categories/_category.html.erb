@@ -1,7 +1,9 @@
 <div id="<%= dom_id category %>">
   <p class="my-5">
     <strong class="block font-medium mb-1">Name:</strong>
-    <%= image_tag(category.image) %>
+    <% if category.image.attached? %>
+      <%= image_tag(category.image) %>
+    <% end %>
   </p>
   <p class="my-5">
     <strong class="block font-medium mb-1">Name:</strong>
