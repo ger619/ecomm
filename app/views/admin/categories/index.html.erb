@@ -17,13 +17,17 @@
           <table class="min-w-full overflow-x-scroll ">
             <thead class="bg-white border-b">
                <tr>
+                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-8 00 uppercase tracking-wider">image</th>
                  <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-8 00 uppercase tracking-wider">Name</th>
                  <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-8 00 uppercase tracking-wider">Description</th>
               </tr>
             </thead>
             <tbody>
-              <% @admin_categories.each do |admin_category| %>
+              <% @admin_category.each do |admin_category| %>
                 <tr class="bg-gray-50  border-b">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 underline">
+                    <%= image_tag(admin_category.image.variant(saver:{quality: 30})) %>
+                  </td>
                   <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 underline">
                     <%= link_to admin_category.name, edit_admin_category_path(admin_category) %>
                   </td>
