@@ -9,7 +9,7 @@
      static values = { revenue: Array }
 
      initialize() {
-         const data = this.revenueValue.map((item) => item[1]/1.0)
+         const data = this.revenueValue.map((item) => item[1]/10.0)
          const labels = this.revenueValue.map((item) => item[0])
 
          const ctx = document.getElementById('revenueChart')
@@ -28,13 +28,13 @@
              options: {
                  plugins: {
                      legend: {
-                         display: false
+                         display: true
                      }
                  },
                  scales: {
                      x: {
                          grid: {
-                             display: false
+                             display: true
                          }
                      },
                      y: {
