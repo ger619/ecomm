@@ -23,4 +23,6 @@
   end
 
   get 'admin' => 'admin#index'
+
+   resources :category, only: %i[index show]
 end
