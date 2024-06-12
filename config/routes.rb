@@ -4,10 +4,8 @@
      resources :products do
        resources :stocks
      end
+     resources :categories
    end
-  namespace :admin do
-    resources :categories
-  end
   devise_for :admins
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -24,5 +22,7 @@
 
   get 'admin' => 'admin#index'
 
-   resources :category, only: %i[index show]
+   resources :categories, only: %i[index show]
+   resources :products, only: %i[index show]
+
 end

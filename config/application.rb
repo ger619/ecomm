@@ -23,5 +23,7 @@ module Ecomm
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    # Rails.application.config.active_storage.track_variants = false
+
   end
 end
