@@ -24,8 +24,8 @@
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 underline">
                 <%= link_to p.name, edit_admin_product_path(p) %>
               </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 ">
-                <%= p.description %>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 truncate ...">
+                <%= p.content %>
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                 <%= p.category.name %>
