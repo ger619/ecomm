@@ -21,8 +21,10 @@
   end
 
   get 'admin' => 'admin#index'
+   get 'cart' => 'carts#show'
 
    resources :categories, only: %i[index show]
    resources :products, only: %i[index show]
+
 
 end

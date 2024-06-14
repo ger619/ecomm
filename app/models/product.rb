@@ -3,6 +3,7 @@ class Product < ApplicationRecord
     attachable.variant :thumb, resize_to_limit: [50, 50]
     attachable.variant :medium, resize_to_limit: [300, 300]
   end
+  has_rich_text :content
 
   belongs_to :category
   has_many :stocks, dependent: :destroy

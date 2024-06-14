@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="my-5">
-    <%= form.label :amount %>
-    <%= form.number_field :amount, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.label :Total_Number_In_Stock%>
+    <%= form.number_field :amount, in: 0.0..10000, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full", required: true %>
   </div>
 
   <div class="my-5">
-    <%= form.label :size %>
+    <%= form.label :size_or_product_details %>
     <%= form.text_field :size, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
