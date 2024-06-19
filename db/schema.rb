@@ -85,7 +85,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_14_093327) do
   create_table "orders", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "customer_email"
     t.boolean "fulfilled"
-    t.integer "total"
+    t.integer "total", default: 0
     t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
