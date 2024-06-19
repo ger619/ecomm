@@ -16,10 +16,9 @@ export default class extends Controller {
       total += item.price * item.quantity
       const div = document.createElement("div")
       div.classList.add("mt-2")
-      div.innerText = ` Item: ${item.name} - kshs: ${item.price} - Size: ${item.size} - Quantity: ${item.quantity}`
+      div.innerText = ` ${item.name} - Size: ${item.size} - Quantity: ${item.quantity}  - @ ${item.price} - Total: ${item.price * item.quantity}`
       const deleteButton = document.createElement("button")
       deleteButton.innerText = "Remove"
-      console.log("item.id: ", item.id)
       deleteButton.value = JSON.stringify({id: item.id, size: item.size})
       deleteButton.classList.add("bg-gray-500", "rounded", "text-white", "px-2", "py-1", "ml-2")
       deleteButton.addEventListener("click", this.removeFromCart)
