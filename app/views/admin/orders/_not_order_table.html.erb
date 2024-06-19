@@ -37,6 +37,10 @@
           <% end %>
           </tbody>
         </table>
+        <div class="p-4">
+          <%== pagy_nav(@not_fulfilled_pagy) if @not_fulfilled_pagy.pages > 1 %>
+        </div>
+
       </div>
     </div>
   </div>
