@@ -6,5 +6,6 @@ class CategoriesController < ApplicationController
     return unless params[:min].present?
 
     @product = @product.where('price >= ?', params[:min])
+    @category = Category.all
   end
 end

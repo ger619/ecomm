@@ -1,7 +1,8 @@
-<nav class="fixed w-full top-0 bg-gray-100 z-10 py-4">
+<nav class="w-full top-0 bg-gray-100 z-10 py-4">
   <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-    <div class="relative flex items-center justify-between h-16">
-      <div class="flex-1 flex items-center justify-between sm:items-stretch sm:justify-between">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex-1 flex justify-start sm:items-stretch">
+
         <div>
           <div class="flex-shrink-0 flex items-center">
             <%= link_to root_path do  %>
@@ -11,25 +12,36 @@
           </div>
         </div>
 
-        <div class="hidden sm:flex items-center justify-center">
-          <div class="flex space-x-10">
-            <%= link_to 'Shop', root_path, class: 'text-gray-500 hover:underline py-2 rounded-md text-md font-medium' %>
+        <div class="flex justify-start w-full pt-2 ml-10">
+
+          <div class="flex justify-between w-full">
+
+            <div class="hidden sm:flex items-center gap-4">
+              <div class="flex space-x-10">
+                <%= link_to 'Home', root_path, class: 'text-gray-500 hover:underline py-2 rounded-md text-md font-medium uppercase' %>
+              </div>
+              <div class="flex space-x-10">
+                <% if Category.present? %>
+
+                    <%= link_to "Kijani", categories_path(Category), class: 'text-gray-500 hover:underline py-2 rounded-md text-md font-medium uppercase' %>
+
+                <% end %>
+              </div>
+            </div>
+
+            <div class="hidden sm:flex sm:ml-6 items-center justify-center ">
+              <div class="space-x-10">
+                <%= link_to cart_path, class: 'text-gray-500 hover:underline py-2 rounded-md font-medium' do %>
+                  <%= icon 'fa-solid', 'shopping-cart' %>
+                <% end %>
+              </div>
+            </div>
+
           </div>
+
         </div>
 
-        <div class="hidden sm:flex items-center justify-center">
-          <div class="flex space-x-10">
-            <%= link_to 'Shop', root_path, class: 'text-gray-500 hover:underline py-2 rounded-md text-md font-medium' %>
-          </div>
-        </div>
-        <div class="hidden sm:flex sm:ml-6 items-center justify-center ">
-          <div class="space-x-10">
-            <%= link_to cart_path, class: 'text-gray-500 hover:underline py-2 rounded-md font-medium' do %>
-              <%= icon 'fa-solid', 'shopping-cart' %>
-            <% end %>
-          </div>
 
-        </div>
 
       </div>
     </div>

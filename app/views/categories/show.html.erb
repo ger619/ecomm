@@ -18,9 +18,9 @@
     <% else %>
       <% @product.each do |product| %>
         <%= link_to product_path(product) do %>
-          <div class="max-w-sm flex flex-col p-4 justify-center items-center">
-            <%= product.images.present? ? image_tag(url_for(product.images.first), class: "rounded w-72 h-96") : image_tag("https://via.placeholder.com/250", class: "rounded") %>
-            <h2 class="text-gray-800 font-medium text-lg text-center mb-6 uppercase">
+          <div class="max-w-sm flex flex-col p-2 justify-center items-center">
+            <%= product.images.present? ? image_tag(url_for(product.images.first), class: "rounded h-[500px] w-[500px] object-cover object-center border-4 border-gray-400") : image_tag("https://via.placeholder.com/250", class: "rounded") %>
+            <h2 class="text-gray-800 font-medium text-lg text-center mt-6 uppercase">
               <%= product.name %>
             </h2>
           </div>

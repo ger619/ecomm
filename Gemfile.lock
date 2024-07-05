@@ -115,6 +115,7 @@ GEM
     ffi (1.17.0-x86-linux-gnu)
     ffi (1.17.0-x86_64-darwin)
     ffi (1.17.0-x86_64-linux-gnu)
+    flex-slider-rails (2.7.0)
     font-awesome-sass (6.5.2)
       sassc (~> 2.0)
     globalid (1.2.1)
@@ -301,6 +302,7 @@ DEPENDENCIES
   debug
   devise (~> 4.9)
   error_highlight (>= 0.4.0)
+  flex-slider-rails
   font-awesome-sass (~> 6.5.1)
   image_processing (~> 1.2)
   importmap-rails
