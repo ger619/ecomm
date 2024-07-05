@@ -4,3 +4,12 @@ import "controllers"
 
 import "trix"
 import "@rails/actiontext"
+//= require jquery.flexslider
+//= require jquery.flexslider-min
+$(document).ready(function(){
+    $('.flexslider').flexslider();
+});
+
+$(document).on("turbolinks:load", function() {
+    $('.flexslider').flexslider();
+});
